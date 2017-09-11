@@ -1,1 +1,163 @@
 EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:pic16f1779
+LIBS:E_Load-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 4200 600  1350 600 
+U 59B6BDBE
+F0 "Load" 60
+F1 "Load.sch" 60
+F2 "I_SENSE" O L 4200 700 60 
+F3 "B_LOAD_TRANSISTOR" I L 4200 900 60 
+F4 "LOAD_OUT" O R 5550 700 60 
+F5 "LOAD_IN" I R 5550 800 60 
+F7 "GND" O R 5550 1100 60 
+$EndSheet
+$Comp
+L GND #PWR01
+U 1 1 59B70594
+P 5650 1200
+F 0 "#PWR01" H 5650 950 50  0001 C CNN
+F 1 "GND" H 5650 1050 50  0000 C CNN
+F 2 "" H 5650 1200 50  0000 C CNN
+F 3 "" H 5650 1200 50  0000 C CNN
+	1    5650 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 1100 5550 1100
+$Sheet
+S 2650 600  1350 600 
+U 59B71B37
+F0 "MicroController" 60
+F1 "MicroController.sch" 60
+F2 "5V" I L 2650 700 60 
+F3 "12V" I L 2650 800 60 
+F4 "GND" O L 2650 1100 60 
+F5 "I_SENSE" I R 4000 700 60 
+F6 "B_LOAD_TRANSISTOR" O R 4000 900 60 
+$EndSheet
+$Comp
+L CONN_01X02 P2
+U 1 1 59B786E6
+P 5850 750
+F 0 "P2" H 5850 900 50  0000 C CNN
+F 1 "LOAD" H 5850 600 50  0000 C CNN
+F 2 "" H 5850 750 50  0001 C CNN
+F 3 "" H 5850 750 50  0000 C CNN
+	1    5850 750 
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5550 700  5650 700 
+Wire Wire Line
+	5550 800  5650 800 
+Wire Wire Line
+	5650 1100 5650 1200
+$Comp
+L GND #PWR02
+U 1 1 59B788C4
+P 2550 1200
+F 0 "#PWR02" H 2550 950 50  0001 C CNN
+F 1 "GND" H 2550 1050 50  0000 C CNN
+F 2 "" H 2550 1200 50  0000 C CNN
+F 3 "" H 2550 1200 50  0000 C CNN
+	1    2550 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1200 2550 1100
+Wire Wire Line
+	2550 1100 2650 1100
+$Sheet
+S 1100 600  1350 600 
+U 59B78CB4
+F0 "Power Supply" 60
+F1 "PowerSupply.sch" 60
+F2 "12V_IN" I L 1100 700 60 
+F3 "12V_OUT" O R 2450 800 60 
+F4 "5V_OUT" O R 2450 700 60 
+F5 "GND" O L 1100 1100 60 
+$EndSheet
+Wire Wire Line
+	4000 700  4200 700 
+Wire Wire Line
+	4000 900  4200 900 
+$Comp
+L CONN_01X02 P1
+U 1 1 59B79C74
+P 700 750
+F 0 "P1" H 700 600 50  0000 C CNN
+F 1 "12V_IN" H 700 900 50  0000 C CNN
+F 2 "" H 700 750 50  0001 C CNN
+F 3 "" H 700 750 50  0000 C CNN
+	1    700  750 
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 59B79DD4
+P 1000 1200
+F 0 "#PWR03" H 1000 950 50  0001 C CNN
+F 1 "GND" H 1000 1050 50  0000 C CNN
+F 2 "" H 1000 1200 50  0000 C CNN
+F 3 "" H 1000 1200 50  0000 C CNN
+	1    1000 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 1200 1000 800 
+Wire Wire Line
+	1000 800  900  800 
+Wire Wire Line
+	1100 1100 1000 1100
+Connection ~ 1000 1100
+Wire Wire Line
+	900  700  1100 700 
+Wire Wire Line
+	2450 700  2650 700 
+Wire Wire Line
+	2450 800  2650 800 
+$EndSCHEMATC

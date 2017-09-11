@@ -1,0 +1,324 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:pic16f1779
+LIBS:E_Load-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LM7805CT U3
+U 1 1 59B7A263
+P 2300 1100
+F 0 "U3" H 2100 1300 50  0000 C CNN
+F 1 "LM7805CT" H 2300 1300 50  0000 L CNN
+F 2 "Power_Integrations:TO-220" H 2300 1200 50  0000 C CIN
+F 3 "" H 2300 1100 50  0000 C CNN
+	1    2300 1100
+	1    0    0    -1  
+$EndComp
+Text HLabel 1100 1050 0    60   Input ~ 0
+12V_IN
+Text HLabel 1100 1150 0    60   Output ~ 0
+12V_OUT
+Text HLabel 1100 1300 0    60   Output ~ 0
+5V_OUT
+Text HLabel 1100 1450 0    60   Output ~ 0
+GND
+$Comp
+L GND #PWR017
+U 1 1 59B7A2EC
+P 1200 1550
+F 0 "#PWR017" H 1200 1300 50  0001 C CNN
+F 1 "GND" H 1200 1400 50  0000 C CNN
+F 2 "" H 1200 1550 50  0000 C CNN
+F 3 "" H 1200 1550 50  0000 C CNN
+	1    1200 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 1450 1200 1450
+Wire Wire Line
+	1200 1450 1200 1550
+Text Notes 750  700  0    60   ~ 0
+INPUT/OUTPUT
+Wire Notes Line
+	1550 1800 1550 550 
+Wire Notes Line
+	550  1800 1550 1800
+Wire Notes Line
+	550  1800 550  550 
+Wire Notes Line
+	550  550  1550 550 
+$Comp
+L GND #PWR018
+U 1 1 59B7A35A
+P 2300 1550
+F 0 "#PWR018" H 2300 1300 50  0001 C CNN
+F 1 "GND" H 2300 1400 50  0000 C CNN
+F 2 "" H 2300 1550 50  0000 C CNN
+F 3 "" H 2300 1550 50  0000 C CNN
+	1    2300 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C5
+U 1 1 59B7A3F7
+P 4300 1250
+F 0 "C5" H 4310 1320 50  0000 L CNN
+F 1 "100n" H 4310 1170 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4300 1250 50  0001 C CNN
+F 3 "" H 4300 1250 50  0000 C CNN
+	1    4300 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C4
+U 1 1 59B7A43B
+P 3950 1250
+F 0 "C4" H 3960 1320 50  0000 L CNN
+F 1 "100n" H 3960 1170 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3950 1250 50  0001 C CNN
+F 3 "" H 3950 1250 50  0000 C CNN
+	1    3950 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 1050 2800 1150
+$Comp
+L GND #PWR019
+U 1 1 59B7A51B
+P 2800 1550
+F 0 "#PWR019" H 2800 1300 50  0001 C CNN
+F 1 "GND" H 2800 1400 50  0000 C CNN
+F 2 "" H 2800 1550 50  0000 C CNN
+F 3 "" H 2800 1550 50  0000 C CNN
+	1    2800 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP_Small C1
+U 1 1 59B7A552
+P 2800 1250
+F 0 "C1" H 2810 1320 50  0000 L CNN
+F 1 "10u" H 2810 1170 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.00mm" H 2800 1250 50  0001 C CNN
+F 3 "" H 2800 1250 50  0000 C CNN
+	1    2800 1250
+	1    0    0    -1  
+$EndComp
+Text Notes 2350 700  0    60   ~ 0
+5V REGULATOR
+Wire Notes Line
+	1600 550  1600 1800
+Wire Notes Line
+	3100 550  3100 1800
+Wire Wire Line
+	2800 1550 2800 1350
+Wire Wire Line
+	2300 1350 2300 1550
+$Comp
+L C_Small C3
+U 1 1 59B7AC25
+P 3700 1250
+F 0 "C3" H 3710 1320 50  0000 L CNN
+F 1 "100n" H 3710 1170 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3700 1250 50  0001 C CNN
+F 3 "" H 3700 1250 50  0000 C CNN
+	1    3700 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C2
+U 1 1 59B7AC2C
+P 3450 1250
+F 0 "C2" H 3460 1320 50  0000 L CNN
+F 1 "100n" H 3460 1170 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3450 1250 50  0001 C CNN
+F 3 "" H 3450 1250 50  0000 C CNN
+	1    3450 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 1050 3950 1050
+Wire Wire Line
+	3700 1050 3700 1150
+Wire Wire Line
+	3350 1450 4300 1450
+Wire Wire Line
+	3700 1450 3700 1350
+$Comp
+L GND #PWR020
+U 1 1 59B7AC40
+P 3350 1550
+F 0 "#PWR020" H 3350 1300 50  0001 C CNN
+F 1 "GND" H 3350 1400 50  0000 C CNN
+F 2 "" H 3350 1550 50  0000 C CNN
+F 3 "" H 3350 1550 50  0000 C CNN
+	1    3350 1550
+	1    0    0    -1  
+$EndComp
+Connection ~ 3450 1450
+Wire Notes Line
+	4600 1800 3150 1800
+Wire Notes Line
+	4600 550  4600 1800
+Wire Notes Line
+	4600 550  3150 550 
+Wire Notes Line
+	3150 550  3150 1800
+Text Notes 3950 700  0    60   ~ 0
+DECOUPLING
+Wire Wire Line
+	3950 1050 3950 1150
+Connection ~ 3700 1050
+Wire Wire Line
+	3950 1450 3950 1350
+Connection ~ 3700 1450
+Wire Wire Line
+	3450 1150 3450 1050
+Connection ~ 3450 1050
+Wire Wire Line
+	4200 1050 4300 1050
+Wire Wire Line
+	4300 1050 4300 1150
+Wire Wire Line
+	4300 1450 4300 1350
+Connection ~ 3950 1450
+Wire Wire Line
+	2700 1050 2900 1050
+Connection ~ 2800 1050
+Wire Wire Line
+	1800 1050 1900 1050
+$Comp
+L +5V #PWR021
+U 1 1 59B7C93E
+P 3350 950
+F 0 "#PWR021" H 3350 800 50  0001 C CNN
+F 1 "+5V" H 3350 1090 50  0000 C CNN
+F 2 "" H 3350 950 50  0000 C CNN
+F 3 "" H 3350 950 50  0000 C CNN
+	1    3350 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR022
+U 1 1 59B7CAE8
+P 1200 950
+F 0 "#PWR022" H 1200 800 50  0001 C CNN
+F 1 "+12V" H 1200 1090 50  0000 C CNN
+F 2 "" H 1200 950 50  0000 C CNN
+F 3 "" H 1200 950 50  0000 C CNN
+	1    1200 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 950  4200 1050
+Wire Wire Line
+	3350 1050 3350 950 
+$Comp
+L +5V #PWR023
+U 1 1 59B7CBB3
+P 2900 950
+F 0 "#PWR023" H 2900 800 50  0001 C CNN
+F 1 "+5V" H 2900 1090 50  0000 C CNN
+F 2 "" H 2900 950 50  0000 C CNN
+F 3 "" H 2900 950 50  0000 C CNN
+	1    2900 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 950  1800 1050
+Wire Wire Line
+	2900 1050 2900 950 
+Wire Notes Line
+	1600 550  3100 550 
+Wire Notes Line
+	3100 1800 1600 1800
+$Comp
+L +12V #PWR024
+U 1 1 59B7CEB2
+P 4200 950
+F 0 "#PWR024" H 4200 800 50  0001 C CNN
+F 1 "+12V" H 4200 1090 50  0000 C CNN
+F 2 "" H 4200 950 50  0000 C CNN
+F 3 "" H 4200 950 50  0000 C CNN
+	1    4200 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 1050 1200 1050
+Wire Wire Line
+	1200 950  1200 1150
+Wire Wire Line
+	1200 1150 1100 1150
+Connection ~ 1200 1050
+$Comp
+L +12V #PWR025
+U 1 1 59B7D0D3
+P 1800 950
+F 0 "#PWR025" H 1800 800 50  0001 C CNN
+F 1 "+12V" H 1800 1090 50  0000 C CNN
+F 2 "" H 1800 950 50  0000 C CNN
+F 3 "" H 1800 950 50  0000 C CNN
+	1    1800 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR026
+U 1 1 59B7D0F0
+P 1400 950
+F 0 "#PWR026" H 1400 800 50  0001 C CNN
+F 1 "+5V" H 1400 1090 50  0000 C CNN
+F 2 "" H 1400 950 50  0000 C CNN
+F 3 "" H 1400 950 50  0000 C CNN
+	1    1400 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 950  1400 1300
+Wire Wire Line
+	1400 1300 1100 1300
+Wire Wire Line
+	3450 1350 3450 1450
+Wire Wire Line
+	3350 1450 3350 1550
+$EndSCHEMATC
