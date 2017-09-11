@@ -1,0 +1,6 @@
+[PROJECTS]
+Count=2
+Project0=..\..\mikroc\E_Load.mcppi
+Project1=E_Load_Sim.mcppi
+[ActiveProject]
+Index=1
