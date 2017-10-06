@@ -453,7 +453,7 @@ Text Label 1900 2650 0    60   ~ 0
 B_LOAD_TRANSISTOR
 Connection ~ 1800 2650
 Text Label 1000 2550 2    60   ~ 0
-RB7
+RA2
 Wire Wire Line
 	1000 2550 1100 2550
 Text Label 1000 3600 2    60   ~ 0
@@ -656,7 +656,7 @@ RC0
 Text Label 2400 6900 2    60   ~ 0
 RC1
 Text Label 2400 7000 2    60   ~ 0
-RC2
+RC3
 Wire Wire Line
 	2400 6800 2500 6800
 Wire Wire Line
@@ -678,4 +678,219 @@ Wire Wire Line
 	2100 7000 2100 7100
 Wire Wire Line
 	2100 7100 2500 7100
+$Comp
+L CONN_01X20 P?
+U 1 1 59D5FF47
+P 4825 5150
+F 0 "P?" H 4825 6200 50  0000 C CNN
+F 1 "DISPLAY" V 4925 5150 50  0000 C CNN
+F 2 "" H 4825 5150 50  0000 C CNN
+F 3 "" H 4825 5150 50  0000 C CNN
+	1    4825 5150
+	1    0    0    -1  
+$EndComp
+Text Label 4525 5000 2    60   ~ 0
+RD0
+Text Label 4525 5100 2    60   ~ 0
+RD1
+Text Label 4525 5200 2    60   ~ 0
+RD2
+Text Label 4525 5300 2    60   ~ 0
+RD3
+Text Label 4525 5400 2    60   ~ 0
+RD4
+Text Label 4525 5500 2    60   ~ 0
+RD5
+Text Label 4525 5600 2    60   ~ 0
+RD6
+Text Label 4525 5700 2    60   ~ 0
+RD7
+Text Label 4525 4200 2    60   ~ 0
+RB0
+Text Label 4525 4300 2    60   ~ 0
+RB1
+Text Label 4525 4700 2    60   ~ 0
+RB2
+Text Label 4525 4800 2    60   ~ 0
+RB3
+Text Label 4525 4900 2    60   ~ 0
+RB4
+Text Label 4525 5800 2    60   ~ 0
+RB5
+$Comp
+L +5V #PWR?
+U 1 1 59D607C5
+P 4125 4250
+F 0 "#PWR?" H 4125 4100 50  0001 C CNN
+F 1 "+5V" H 4125 4390 50  0000 C CNN
+F 2 "" H 4125 4250 50  0000 C CNN
+F 3 "" H 4125 4250 50  0000 C CNN
+	1    4125 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 59D60849
+P 4175 6150
+F 0 "#PWR?" H 4175 5900 50  0001 C CNN
+F 1 "GND" H 4175 6000 50  0000 C CNN
+F 2 "" H 4175 6150 50  0000 C CNN
+F 3 "" H 4175 6150 50  0000 C CNN
+	1    4175 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4175 6150 4175 4400
+Wire Wire Line
+	4175 4400 4625 4400
+Wire Wire Line
+	4125 4250 4125 4500
+Wire Wire Line
+	4125 4500 4625 4500
+$Comp
+L C_Small C?
+U 1 1 59D60C67
+P 3925 4500
+F 0 "C?" H 3935 4570 50  0000 L CNN
+F 1 "100n" H 3935 4420 50  0000 L CNN
+F 2 "" H 3925 4500 50  0000 C CNN
+F 3 "" H 3925 4500 50  0000 C CNN
+	1    3925 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3925 4400 3925 4350
+Wire Wire Line
+	3475 4350 4125 4350
+Connection ~ 4125 4350
+Wire Wire Line
+	3925 4600 3925 4650
+Wire Wire Line
+	3775 4650 4175 4650
+Connection ~ 4175 4650
+$Comp
+L POT_TRIM RV?
+U 1 1 59D60E6A
+P 3775 4850
+F 0 "RV?" V 3600 4850 50  0000 C CNN
+F 1 "10k" V 3675 4850 50  0000 C CNN
+F 2 "" H 3775 4850 50  0000 C CNN
+F 3 "" H 3775 4850 50  0000 C CNN
+	1    3775 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3775 4700 3775 4650
+Connection ~ 3925 4650
+Wire Wire Line
+	3775 5000 3775 5900
+Wire Wire Line
+	3775 5900 4625 5900
+Wire Wire Line
+	3925 4850 4275 4850
+Wire Wire Line
+	4275 4850 4275 4600
+Wire Wire Line
+	4275 4600 4625 4600
+Wire Wire Line
+	4625 6000 3475 6000
+Wire Wire Line
+	3475 6000 3475 4350
+Connection ~ 3925 4350
+$Comp
+L Q_NPN_BEC Q?
+U 1 1 59D613CD
+P 4475 6700
+F 0 "Q?" H 4675 6750 50  0000 L CNN
+F 1 "BC847" H 4675 6650 50  0000 L CNN
+F 2 "" H 4675 6800 50  0000 C CNN
+F 3 "" H 4475 6700 50  0000 C CNN
+	1    4475 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4575 6100 4625 6100
+$Comp
+L R R?
+U 1 1 59D614FF
+P 4575 6300
+F 0 "R?" V 4655 6300 50  0000 C CNN
+F 1 "20" V 4575 6300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4505 6300 50  0001 C CNN
+F 3 "" H 4575 6300 50  0000 C CNN
+	1    4575 6300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4575 6150 4575 6100
+Wire Wire Line
+	4575 6500 4575 6450
+$Comp
+L R R?
+U 1 1 59D619A5
+P 4075 6700
+F 0 "R?" V 4155 6700 50  0000 C CNN
+F 1 "4k7" V 4075 6700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4005 6700 50  0001 C CNN
+F 3 "" H 4075 6700 50  0000 C CNN
+	1    4075 6700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4225 6700 4275 6700
+$Comp
+L GND #PWR?
+U 1 1 59D61D4B
+P 4575 6950
+F 0 "#PWR?" H 4575 6700 50  0001 C CNN
+F 1 "GND" H 4575 6800 50  0000 C CNN
+F 2 "" H 4575 6950 50  0000 C CNN
+F 3 "" H 4575 6950 50  0000 C CNN
+	1    4575 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4575 6950 4575 6900
+Wire Wire Line
+	4525 4200 4625 4200
+Wire Wire Line
+	4525 4300 4625 4300
+Wire Wire Line
+	4525 4700 4625 4700
+Wire Wire Line
+	4525 4800 4625 4800
+Wire Wire Line
+	4525 4900 4625 4900
+Wire Wire Line
+	4525 5000 4625 5000
+Wire Wire Line
+	4525 5100 4625 5100
+Wire Wire Line
+	4525 5200 4625 5200
+Wire Wire Line
+	4525 5300 4625 5300
+Wire Wire Line
+	4525 5400 4625 5400
+Wire Wire Line
+	4525 5500 4625 5500
+Wire Wire Line
+	4525 5600 4625 5600
+Wire Wire Line
+	4525 5700 4625 5700
+Wire Wire Line
+	4525 5800 4625 5800
+Text Label 3875 6700 2    60   ~ 0
+RC2
+Wire Wire Line
+	3875 6700 3925 6700
+Wire Notes Line
+	2950 3750 5550 3750
+Wire Notes Line
+	5550 7250 5550 3750
+Wire Notes Line
+	2950 7250 5550 7250
+Wire Notes Line
+	2950 7250 2950 3750
+Text Notes 4575 3875 0    60   ~ 0
+DISPLAY CONNECTOR
 $EndSCHEMATC

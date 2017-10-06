@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name OSHW)(type Legacy)(uri "$(KIPRJMOD)\\libs\\OSHW\\OSHW.mod")(options "")(descr ""))
+)
